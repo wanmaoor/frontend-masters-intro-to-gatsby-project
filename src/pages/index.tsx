@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
+import Header from '../components/Header';
 
 interface MyQuery {
   site: {
@@ -26,6 +27,7 @@ const App = () => {
   const title = data?.site?.siteMetadata?.title ?? {}
   return (
     <>
+      <Header title={'首页'} />
       <header>
         <Link to={'/about'}>{title}</Link>
       </header>
